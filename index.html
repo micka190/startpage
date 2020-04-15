@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+		<link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.0.45/css/materialdesignicons.min.css" />
+		<link rel="stylesheet" href="./styles.css" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row white z-depth-4">
+				<div class="col s12">
+					<ul class="tabs tabs-fixed-width">
+						<li class="tab">
+							<a href="#favorites"><span class="mdi mdi-star"></span> Favorites</a>
+						</li>
+						<li class="tab">
+							<a href="#comics"><span class="mdi mdi-book-open-variant"></span> Comics</a>
+						</li>
+						<li class="tab">
+							<a href="#entertainment"><span class="mdi mdi-theater"></span> Entertainment</a>
+						</li>
+						<li class="tab">
+							<a href="#vue"><span class="mdi mdi-vuejs"></span> Vue</a>
+						</li>
+						<li class="tab">
+							<a href="#programming"><span class="mdi mdi-console"></span> Programming</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="section">
+				<div id="favorites" class="col s12">
+					<div class="row">
+						<div class="col s9">
+							<div class="card z-depth-4" id="favoritesContainer">
+								<div class="card-content">
+									<div class="row">
+										<div class="col s8">
+											<div class="row" id="favoritesPrimary"></div>
+										</div>
+										<div class="col s4">
+											<div class="row" id="favoritesSecondary"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col s3">
+							<div class="card blue white-text z-depth-4" id="weatherContainer">
+								<div class="card-content" id="weatherContent">
+									<span class="card-title" id="weatherHeader"></span>
+									<div class="progress white" id="weatherLoader">
+										<div class="indeterminate blue lighten-3"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fixed-action-btn">
+						<button class="waves-effect waves-light btn-large red hoverable" id="favoritesOpenAllBtn">Open all</button>
+					</div>
+				</div>
+				<div id="comics" class="col s12">
+					<div class="row">
+						<div class="col s12">
+							<div class="card">
+								<div class="card-content">
+									<div class="row white" id="comicsContainer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fixed-action-btn">
+						<button class="waves-effect waves-light btn-large red hoverable" id="comicsOpenAllBtn">Open all</button>
+					</div>
+				</div>
+				<div id="entertainment" class="col s12">
+					<div class="row">
+						<div class="col s4">
+							<div class="row" id="entertainmentLeft"></div>
+						</div>
+						<div class="col s4">
+							<div class="row" id="entertainmentCenter">
+								<div class="col s12">
+									<div class="card">
+										<div class="card-content">
+											<span class="card-title">Currently watching</span>
+											<div class="collection">
+											</div>
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="col s4">
+							<div class="row" id="entertainmentRight"></div>
+						</div>
+					</div>
+					<div class="fixed-action-btn">
+						<button class="waves-effect waves-light btn-large red hoverable" id="MALBtn">Open list</button>
+					</div>
+				</div>
+				<div id="vue" class="col s12">
+					<div class="row">
+						<div class="col s12">
+							<div class="card white-text z-depth-4" id="vueDocsContainer">
+								<div class="card-content">
+									<div class="row">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col s12">
+							<div class="card white-text z-depth-4" id="vuetifyDocsContainer">
+								<div class="card-content">
+									<div class="row">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row white z-depth-4">
+					<div id="programming" class="col s12">
+						<div class="row"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="scripts.js"></script>
+
+		<script>
+			init();
+		</script>
+	</body>
+</html>

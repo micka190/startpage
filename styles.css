@@ -1,0 +1,63 @@
+body {
+	background-image: url('https://picsum.photos/1920/1080');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.card-image {
+	margin: auto;
+}
+
+.card-image img {
+	margin: auto;
+	max-height: 250px;
+	max-width: 250px;
+	padding: 25px;
+}
+
+#favoritesContainer, #weatherContainer {
+	height: 415px;
+}
+
+#favoritesPrimary .card-image {
+	height: 260px;
+}
+
+#favoritesSecondary .card-image {
+	height: 75px;
+}
+
+#comics .card .row .card{
+	height: 300px;
+	box-sizing: content-box;
+}
+
+#comicsContainer {
+	max-height: 600px;
+	overflow-y: auto;
+}
+
+#entertainment .card {
+	max-height: 800px;
+}
+
+#entertainment .card-image {
+	min-height: 252px;
+}
+
+#entertainment .collection {
+	max-height: 600px;
+	overflow-y: auto;
+}
+
+#vueDocsContainer {
+	background-color: #4fc08d
+}
+
+#vuetifyDocsContainer {
+	background-color: #7bc5fe;
+}
+
+#vueDocsContainer .card, #vuetifyDocsContainer .card{
+	text-align: center;
+}
