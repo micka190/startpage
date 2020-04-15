@@ -434,9 +434,7 @@ const createProgrammingTab = () => {
 };
 
 const init = async () => {
-	$(document).ready(function () {
-		$('.tabs').tabs();
-	});
+	M.AutoInit();
 
 	createFavoritesTab();
 	createComicsTab();
