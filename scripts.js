@@ -1,5 +1,4 @@
 const CONFIGS = {
-	weatherArea: 'edmonton',
 	MALUser: 'micka190'
 };
 
@@ -83,75 +82,6 @@ const createIconTiles = (root, tiles) => {
 	}
 };
 
-const createWeatherWidget = async () => {
-	try {
-		const response = await fetch(`http://wttr.in/${CONFIGS.weatherArea}?format=j1`);
-		if (response.ok) {
-			const data = await response.json();
-
-			const header = document.getElementById('weatherHeader');
-			const area = data.nearest_area[0];
-			const title = `${area.areaName[0].value}, ${area.region[0].value}`;
-			header.innerHTML = title;
-
-			const content = document.getElementById('weatherContent');
-			const current = data.current_condition[0];
-			let subtitle = createElement('p');
-			subtitle.innerHTML = `${current.localObsDateTime}, ${current.weatherDesc[0].value}`;
-			content.appendChild(subtitle);
-
-			const temp = createElement('span');
-			const actual = createElement('h4');
-			subtitle = createElement('p');
-
-			actual.innerHTML = `${current.temp_C}&deg;C`;
-			subtitle.innerHTML = `Feels like ${current.FeelsLikeC}&deg;C`;
-
-			temp.appendChild(actual);
-			temp.appendChild(subtitle);
-			content.appendChild(temp);
-
-			content.appendChild(createElement('div', ['divider']));
-
-			const wind = createElement('p');
-			const humidity = createElement('p');
-			const minmax = createElement('p');
-			const today = data.weather[0];
-
-			wind.innerHTML = `Wind: ${current.windspeedKmph}km/h`;
-			humidity.innerHTML = `Humidity: ${current.humidity}%`;
-			minmax.innerHTML = `Mix/Max: ${today.mintempC}&deg;C/${today.maxtempC}&deg;C`;
-
-			content.appendChild(wind);
-			content.appendChild(humidity);
-			content.appendChild(minmax);
-		} else {
-			throw response;
-		}
-	} catch (e) {
-		console.error(e);
-		const container = document.getElementById('weatherContainer');
-		container.classList.remove('blue');
-		container.classList.add('amber');
-		container.classList.add('darken-2');
-
-		const header = document.getElementById('weatherHeader');
-		header.innerHTML = 'Failed to load weather';
-
-		const content = document.getElementById('weatherContent');
-		let subtitle = createElement('p');
-		subtitle.innerHTML = `${e.status}: ${e.statusText}`;
-		content.appendChild(subtitle);
-		subtitle = createElement('p');
-		subtitle.innerHTML = 'See console for more details';
-		content.appendChild(subtitle);
-	}
-
-	const content = document.getElementById('weatherContent');
-	const loader = document.getElementById('weatherLoader');
-	content.removeChild(loader);
-};
-
 const createMALWidget = async () => {
 	try {
 		const response = await fetch(`https://api.jikan.moe/v3/user/${CONFIGS.MALUser}/animelist/watching`);
@@ -212,19 +142,19 @@ const createFavoritesTab = async () => {
 	const colsSecondaryBottom = 6;
 	const tilesSecondaryTop = [
 		{
-			src: 'images/websites/protonmail.svg',
-			title: 'ProtonMail',
-			href: 'https://beta.protonmail.com/',
-			color: '#505061',
+			title: 'GitHub',
+			src: 'images/websites/github.png',
+			href: 'https://www.github.com/',
+			color: '#24292e',
 			dark: true
 		}
 	];
 	const tilesSecondaryBottom = [
 		{
-			title: 'GitHub',
-			src: 'images/websites/github.png',
-			href: 'https://www.github.com/',
-			color: '#24292e',
+			src: 'images/websites/protonmail.png',
+			title: 'ProtonMail',
+			href: 'https://beta.protonmail.com/',
+			color: '#505061',
 			dark: true
 		},
 		{
@@ -237,7 +167,6 @@ const createFavoritesTab = async () => {
 	];
 	createTiles(rootSecondary, colsSecondaryTop, tilesSecondaryTop);
 	createTiles(rootSecondary, colsSecondaryBottom, tilesSecondaryBottom);
-	await createWeatherWidget();
 
 	document.getElementById('favoritesOpenAllBtn').addEventListener('click', () => {
 		const allTiles = [...tilesPrimary, ...tilesSecondaryTop, ...tilesSecondaryBottom];
@@ -509,7 +438,7 @@ const init = async () => {
 		$('.tabs').tabs();
 	});
 
-	await createFavoritesTab();
+	createFavoritesTab();
 	createComicsTab();
 	await createEntertainmentTab();
 	createVueTab();

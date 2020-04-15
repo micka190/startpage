@@ -15,16 +15,17 @@ body {
 	padding: 25px;
 }
 
-#favoritesContainer, #weatherContainer {
-	height: 415px;
+#favoritesContainer {
+	height: 443px;
 }
 
 #favoritesPrimary .card-image {
-	height: 260px;
+	height: 311px;
 }
 
-#favoritesSecondary .card-image {
-	height: 75px;
+#favoritesSecondary .card-image{
+	height: 100px;
+	width: 100px;
 }
 
 #comics .card .row .card{
