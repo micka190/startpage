@@ -1,0 +1,27 @@
+{
+  "name": "startpage",
+  "version": "1.0.0",
+  "description": "Personal startpage",
+  "main": "scripts.js",
+  "scripts": {
+    "build:tailwind": "postcss css/tailwind.source.css -o css/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micka190/startpage.git"
+  },
+  "keywords": [
+    "startpage"
+  ],
+  "author": "Michael Noel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/micka190/startpage/issues"
+  },
+  "homepage": "https://github.com/micka190/startpage#readme",
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^8.1.0",
+    "tailwindcss": "^1.9.0"
+  }
+}

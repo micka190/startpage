@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .bg-reddit-orange {
+    background-color: orangered;
+  }
+  
+  .bg-youtube-red {
+    background-color: red;
+  }
+
+  .bg-funimation-purple {
+    background-color: rgb(65, 0, 153);
+  }
+}
+
+@layer components {
+  .tab-button {
+    @apply inline-flex justify-center space-x-1 p-3;
+  }
+
+  .tab-button:hover {
+    @apply text-orange-300;
+  }
+
+  .tab-button-active {
+    @apply border-b-2 border-orange-500 text-orange-500;
+  }
+
+  .tab-button-active:hover {
+    @apply border-b-2 border-orange-500 text-orange-500;
+  }
+
+  .comic-tile {
+    @apply flex justify-center items-center shadow h-64;
+  }
+
+  .comic-tile img {
+    @apply object-scale-down h-64;
+  }
+
+  .mal-tile {
+    @apply shadow-md pb-3;
+  }
+
+  .mal-tile:hover {
+    @apply bg-blue-100;
+  }
+
+  .mal-tile img {
+    @apply mb-2
+  }
+
+  .mal-tile p {
+    @apply px-2
+  }
+}
+

@@ -1,131 +1,136 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-		<link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.0.45/css/materialdesignicons.min.css" />
-		<link rel="stylesheet" href="./styles.css" />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Home</title>
-	</head>
-	<body>
-		<div class="container">
-			<div class="row white z-depth-4">
-				<div class="col s12">
-					<ul class="tabs tabs-fixed-width">
-						<li class="tab">
-							<a href="#favorites"><span class="mdi mdi-star"></span> Favorites</a>
-						</li>
-						<li class="tab">
-							<a href="#comics"><span class="mdi mdi-book-open-variant"></span> Comics</a>
-						</li>
-						<li class="tab">
-							<a href="#entertainment"><span class="mdi mdi-theater"></span> Entertainment</a>
-						</li>
-						<li class="tab">
-							<a href="#vue"><span class="mdi mdi-vuejs"></span> Vue</a>
-						</li>
-						<li class="tab">
-							<a href="#programming"><span class="mdi mdi-console"></span> Programming</a>
-						</li>
-					</ul>
-				</div>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/tailwind.css" />
+	<link rel="stylesheet" href="css/picsum.css" />
+	<title>Home</title>
+</head>
+
+<body>
+	<nav class="container mx-auto text-gray-400 bg-white mb-10">
+		<div class="grid grid-cols-3">
+			<button id="favorites-button" class="tab-button tab-button-active">
+				<svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+				</svg>
+				<span>Favorites</span>
+			</button>
+			<button id="comics-button" class="tab-button">
+				<svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+					</path>
+				</svg>
+				<span>Comics</span>
+			</button>
+			<button id="entertainment-button" class="tab-button">
+				<svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+				</svg>
+				<span>Entertainment</span>
+			</button>
+		</div>
+	</nav>
+
+	<div id="favorites" class="container mx-auto grid grid-cols-5 grid-rows-2 gap-4 p-5 shadow-md bg-white">
+		<a href="https://www.reddit.com/"
+			class="col-span-2 row-span-2 bg-reddit-orange flex items-center justify-center shadow hover:shadow-lg">
+			<img src="images/websites/reddit.svg" />
+		</a>
+		<a href="https://www.youtube.com/feed/subscriptions"
+			class="col-span-2 row-span-2 bg-youtube-red flex items-center justify-center shadow hover:shadow-lg">
+			<img src="images/websites/youtube.png" class="w-64 h-42" />
+		</a>
+		<a href="https://beta.protonmail.com" class="bg-gray-600 flex items-center justify-center shadow hover:shadow-lg">
+			<img src="images/websites/protonmail.png" />
+		</a>
+		<a href="https://github.com/" class="bg-gray-800 flex items-center justify-center shadow hover:shadow-lg">
+			<img src="images/websites/github.png" />
+		</a>
+	</div>
+
+	<div id="comics" class="container mx-auto shadow-md bg-white p-5 hidden">
+		<div class="w-full inline-flex justify-end mb-4">
+			<button id="open-all-comics-button" class="px-3 py-2 text-white bg-orange-500 hover:bg-orange-600 rounded">Open all</button>
+		</div>
+		<div class="grid grid-cols-5 grid-rows-3 gap-4">
+			<a href="https://www.webtoons.com/en/slice-of-life/bluechair/list?title_no=199" class="comic-tile">
+				<img src="images/comics/bluechair.jpg"/>
+			</a>
+			<a href="http://www.d20monkey.com/" class="comic-tile bg-black">
+				<img src="images/comics/d20monkey.png"/>
+			</a>
+			<a href="https://www.falseknees.com" class="comic-tile">
+				<img src="images/comics/falseknees.jpg"/>
+			</a>
+			<a href="https://www.webtoons.com/en/challenge/fox-girls-are-better/list?title_no=201808" class="comic-tile">
+				<img src="images/comics/foxgirlsarebetter.jpg"/>
+			</a>
+			<a href="https://www.goblinscomic.org/" class="comic-tile">
+				<img src="images/comics/goblins.png"/>
+			</a>
+			<a href="https://loadingartist.com/" class="comic-tile">
+				<img src="images/comics/loadingartist.png"/>
+			</a>
+			<a href="https://www.webtoons.com/en/comedy/love-advice/list?title_no=1498" class="comic-tile">
+				<img src="images/comics/loveadvicefromthegreatdukeofhell.png"/>
+			</a>
+			<a href="http://marblegate.webcomic.ws/comics/" class="comic-tile bg-black">
+				<img src="images/comics/marblegate.png"/>
+			</a>
+			<a href="https://www.oglaf.com/" class="comic-tile">
+				<img src="images/comics/oglaf.png"/>
+			</a>
+			<a href="http://www.poorlydrawnlines.com/" class="comic-tile">
+				<img src="images/comics/poorlydrawnlines.png"/>
+			</a>
+			<a href="https://sololeveling.net/" class="comic-tile">
+				<img src="images/comics/sololeveling.jpg"/>
+			</a>
+			<a href="https://swordscomic.com/comic/" class="comic-tile bg-black">
+				<img src="images/comics/swords.png"/>
+			</a>
+			<a href="https://www.webtoons.com/en/fantasy/winter-moon/list?title_no=1093" class="comic-tile">
+				<img src="images/comics/wintermoon.png"/>
+			</a>
+		</div>
+	</div>
+
+	<div id="entertainment" class="container mx-auto grid grid-cols-5 grid-rows-3 gap-4 hidden">
+		<div class="col-span-1 row-span-3 grid grid-rows-3 gap-4 shadow-md bg-white p-5">
+			<a href="https://www.crunchyroll.com/"
+				class="col-span-1 row-span-1 bg-orange-500 flex items-center justify-center shadow hover:shadow-lg">
+				<img src="images/websites/crunchyroll.png" class="w-32 h-32" />
+			</a>
+			<a href="https://www.netflix.com"
+				class="col-span-1 row-span-1 bg-black flex items-center justify-center shadow hover:shadow-lg">
+				<img src="images/websites/netflix.png" />
+			</a>
+			<a href="https://www.funimation.com/shows/"
+				class="col-span-1 row-span-1 bg-funimation-purple flex items-center justify-center shadow hover:shadow-lg">
+				<img src="images/websites/funimation.jpg" />
+			</a>
+		</div>
+		<div class="col-span-4 row-span-3 shadow-md bg-white p-5">
+			<div class="w-full inline-flex justify-between">
+				<h1 class="text-gray-600 font-thin text-2xl">Currently watching</h1>
+				<a href="https://myanimelist.net/animelist/micka190"
+					class="px-3 py-2 text-white bg-orange-500 hover:bg-orange-600 rounded">Open list</a>
 			</div>
-			<div class="section">
-				<div id="favorites" class="col s12">
-					<div class="row">
-						<div class="col s12">
-							<div class="card z-depth-4" id="favoritesContainer">
-								<div class="card-content">
-									<div class="row">
-										<div class="col s8">
-											<div class="row" id="favoritesPrimary"></div>
-										</div>
-										<div class="col s4">
-											<div class="row" id="favoritesSecondary"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="fixed-action-btn">
-						<button class="waves-effect waves-light btn-large red hoverable" id="favoritesOpenAllBtn">Open all</button>
-					</div>
-				</div>
-				<div id="comics" class="col s12">
-					<div class="row">
-						<div class="col s12">
-							<div class="card">
-								<div class="card-content">
-									<div class="row white" id="comicsContainer"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="fixed-action-btn">
-						<button class="waves-effect waves-light btn-large red hoverable" id="comicsOpenAllBtn">Open all</button>
-					</div>
-				</div>
-				<div id="entertainment" class="col s12">
-					<div class="row">
-						<div class="col s4">
-							<div class="row" id="entertainmentLeft"></div>
-						</div>
-						<div class="col s4">
-							<div class="row" id="entertainmentCenter">
-								<div class="col s12">
-									<div class="card">
-										<div class="card-content">
-											<span class="card-title">Currently watching</span>
-											<div class="collection">
-											</div>
-										</div>
-									</div>
-								</div> 
-							</div>
-						</div>
-						<div class="col s4">
-							<div class="row" id="entertainmentRight"></div>
-						</div>
-					</div>
-					<div class="fixed-action-btn">
-						<button class="waves-effect waves-light btn-large red hoverable" id="MALBtn">Open list</button>
-					</div>
-				</div>
-				<div id="vue" class="col s12">
-					<div class="row">
-						<div class="col s12">
-							<div class="card white-text z-depth-4" id="vueDocsContainer">
-								<div class="card-content">
-									<div class="row">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col s12">
-							<div class="card white-text z-depth-4" id="vuetifyDocsContainer">
-								<div class="card-content">
-									<div class="row">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row white z-depth-4">
-					<div id="programming" class="col s12">
-						<div class="row"></div>
-					</div>
-				</div>
+			<div id="mal-watching" class="grid grid-cols-5 gap-2 mt-3">
+				<!-- MAL tiles generated here -->
 			</div>
 		</div>
+	</div>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<script src="scripts.js"></script>
+	<script src="scripts.js"></script>
+</body>
 
-		<script>
-			init();
-		</script>
-	</body>
 </html>
