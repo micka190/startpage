@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bff97ba8.chunk.css",
+    "main.js": "/static/js/main.61131e50.chunk.js",
+    "main.js.map": "/static/js/main.61131e50.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d0b4772b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d0b4772b.js.map",
+    "static/js/2.3990c62a.chunk.js": "/static/js/2.3990c62a.chunk.js",
+    "static/js/2.3990c62a.chunk.js.map": "/static/js/2.3990c62a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.bff97ba8.chunk.css.map": "/static/css/main.bff97ba8.chunk.css.map",
+    "static/js/2.3990c62a.chunk.js.LICENSE.txt": "/static/js/2.3990c62a.chunk.js.LICENSE.txt",
+    "static/media/bluechair.26fa6628.jpg": "/static/media/bluechair.26fa6628.jpg",
+    "static/media/crunchyroll.f39820ab.png": "/static/media/crunchyroll.f39820ab.png",
+    "static/media/d20monkey.41db6cec.png": "/static/media/d20monkey.41db6cec.png",
+    "static/media/falseknees.6b2f0ef3.jpg": "/static/media/falseknees.6b2f0ef3.jpg",
+    "static/media/foxgirlsarebetter.45597063.jpg": "/static/media/foxgirlsarebetter.45597063.jpg",
+    "static/media/funimation.9537add7.jpg": "/static/media/funimation.9537add7.jpg",
+    "static/media/goblins.dc91924e.png": "/static/media/goblins.dc91924e.png",
+    "static/media/loadingartist.213a41cb.png": "/static/media/loadingartist.213a41cb.png",
+    "static/media/loveadvicefromthegreatdukeofhell.2a40384b.png": "/static/media/loveadvicefromthegreatdukeofhell.2a40384b.png",
+    "static/media/marblegate.1892ce80.png": "/static/media/marblegate.1892ce80.png",
+    "static/media/mygirlfriendisanorcwarlord.e592a76c.jpg": "/static/media/mygirlfriendisanorcwarlord.e592a76c.jpg",
+    "static/media/netflix.f4070143.png": "/static/media/netflix.f4070143.png",
+    "static/media/oglaf.82499021.png": "/static/media/oglaf.82499021.png",
+    "static/media/reddit.2dae777b.svg": "/static/media/reddit.2dae777b.svg",
+    "static/media/sololeveling.aff8b9a7.jpg": "/static/media/sololeveling.aff8b9a7.jpg",
+    "static/media/swords.b2069bf7.png": "/static/media/swords.b2069bf7.png",
+    "static/media/theweeklyroll.4f93f809.jpg": "/static/media/theweeklyroll.4f93f809.jpg",
+    "static/media/wintermoon.bf1ced7c.png": "/static/media/wintermoon.bf1ced7c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0b4772b.js",
+    "static/js/2.3990c62a.chunk.js",
+    "static/css/main.bff97ba8.chunk.css",
+    "static/js/main.61131e50.chunk.js"
+  ]
+}
