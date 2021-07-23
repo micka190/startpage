@@ -13,7 +13,14 @@ const tabButtonNormal = `
   active:bg-blue-100 active:text-blue-800
 `;
 
-const Tab = ({ label, children, ...props }) => <div {...props}>{children}</div>;
+const Tab = ({ label, children, ...props }) => (
+  <div
+    className='flex justify-center p-3 text-gray-800'
+    {...props}
+  >
+    {children}
+  </div>
+);
 
 const Tabs = ({ children, ...props }) => {
   const [current, setCurrent] = useState(0);

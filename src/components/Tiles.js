@@ -56,7 +56,7 @@ const ShowTile = ({ data }) => (
         w-56 flex flex-col justify-center items-center rounded border
       `}
     >
-      <img src={data.imageUrl} alt={data.title} className="h-80 rounded-t" />
+      <img src={data.imageUrl} alt={data.title} className="h-80 rounded-t w-full bg-gray-100" />
       <div className="w-full p-3 flex flex-col justify-start gap-1">
         <span className="truncate">{data.title}</span>
         <span className="text-blue-600">

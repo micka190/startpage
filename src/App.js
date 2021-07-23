@@ -1,22 +1,32 @@
+import { useEffect, useState } from 'react';
 import Comics from './components/Comics';
-import Entertainment from './components/Entertainment';
+import Entertainment, { fetchMalData } from './components/Entertainment';
 import Favorites from './components/Favorites';
 import { Tab, Tabs } from './components/Tabs';
 
-const tabContainer = 'flex justify-center p-3 text-gray-800';
-
 const App = () => {
+  const [shows, setShows] = useState([]);
+
+  useEffect(() => {
+    const initializeEntertainmentData = async () => {
+      var anime = await fetchMalData();
+      setShows(anime);
+    }
+
+    initializeEntertainmentData();
+  }, []);
+
   return (
     <div className="w-full flex justify-center">
       <Tabs className="w-full flex flex-col gap-3">
-        <Tab label="Favorites" className={tabContainer}>
+        <Tab label="Favorites">
           <Favorites />
         </Tab>
-        <Tab label="Comics" className={tabContainer}>
+        <Tab label="Comics">
           <Comics />
         </Tab>
-        <Tab label="Entertainment" className={tabContainer}>
-          <Entertainment />
+        <Tab label="Entertainment">
+          <Entertainment shows={shows}/>
         </Tab>
       </Tabs>
     </div>

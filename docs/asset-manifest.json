@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/startpage/static/css/main.bff97ba8.chunk.css",
-    "main.js": "/startpage/static/js/main.61131e50.chunk.js",
-    "main.js.map": "/startpage/static/js/main.61131e50.chunk.js.map",
+    "main.css": "/startpage/static/css/main.9b37def6.chunk.css",
+    "main.js": "/startpage/static/js/main.4c99a0e3.chunk.js",
+    "main.js.map": "/startpage/static/js/main.4c99a0e3.chunk.js.map",
     "runtime-main.js": "/startpage/static/js/runtime-main.59433d5d.js",
     "runtime-main.js.map": "/startpage/static/js/runtime-main.59433d5d.js.map",
-    "static/js/2.3990c62a.chunk.js": "/startpage/static/js/2.3990c62a.chunk.js",
-    "static/js/2.3990c62a.chunk.js.map": "/startpage/static/js/2.3990c62a.chunk.js.map",
+    "static/js/2.76b8d20c.chunk.js": "/startpage/static/js/2.76b8d20c.chunk.js",
+    "static/js/2.76b8d20c.chunk.js.map": "/startpage/static/js/2.76b8d20c.chunk.js.map",
     "index.html": "/startpage/index.html",
-    "static/css/main.bff97ba8.chunk.css.map": "/startpage/static/css/main.bff97ba8.chunk.css.map",
-    "static/js/2.3990c62a.chunk.js.LICENSE.txt": "/startpage/static/js/2.3990c62a.chunk.js.LICENSE.txt",
+    "static/css/main.9b37def6.chunk.css.map": "/startpage/static/css/main.9b37def6.chunk.css.map",
+    "static/js/2.76b8d20c.chunk.js.LICENSE.txt": "/startpage/static/js/2.76b8d20c.chunk.js.LICENSE.txt",
     "static/media/bluechair.26fa6628.jpg": "/startpage/static/media/bluechair.26fa6628.jpg",
     "static/media/crunchyroll.f39820ab.png": "/startpage/static/media/crunchyroll.f39820ab.png",
     "static/media/d20monkey.41db6cec.png": "/startpage/static/media/d20monkey.41db6cec.png",
@@ -31,8 +31,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.59433d5d.js",
-    "static/js/2.3990c62a.chunk.js",
-    "static/css/main.bff97ba8.chunk.css",
-    "static/js/main.61131e50.chunk.js"
+    "static/js/2.76b8d20c.chunk.js",
+    "static/css/main.9b37def6.chunk.css",
+    "static/js/main.4c99a0e3.chunk.js"
   ]
 }

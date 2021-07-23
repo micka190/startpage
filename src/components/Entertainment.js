@@ -1,40 +1,33 @@
-import { useEffect, useState } from 'react';
 import { LinkButton } from './Buttons';
 import MediaSidebar from './MediaSidebar';
 import { ShowTile, ShowTileData } from './Tiles';
 
-const Entertainment = () => {
-  const [shows, setShows] = useState([]);
+const fetchMalData = async () => {
+  const username = 'micka190';
+  const url = `https://api.jikan.moe/v3/user/${username}/animelist/watching`;
+  const response = await fetch(url);
 
-  useEffect(() => {
-    const fetchMalData = async () => {
-      const username = 'micka190';
-      const url = `https://api.jikan.moe/v3/user/${username}/animelist/watching`;
-      const response = await fetch(url);
+  if (response.ok) {
+    const data = await response.json();
+    const anime = data.anime
+      .map(
+        (a) =>
+          new ShowTileData(
+            a.title,
+            a.url,
+            a.image_url,
+            a.total_episodes,
+            a.watched_episodes
+          )
+      );
+    const emptyTiles = Array(5 - (anime.length % 5)).fill(null);
+    return anime.concat(emptyTiles);
+  } else {
+    throw response;
+  }
+}
 
-      if (response.ok) {
-        const data = await response.json();
-        const anime = data.anime
-          .map(
-            (a) =>
-              new ShowTileData(
-                a.title,
-                a.url,
-                a.image_url,
-                a.total_episodes,
-                a.watched_episodes
-              )
-        );
-        const emptyTiles = Array(5 - (anime.length % 5)).fill(null);
-        setShows(anime.concat(emptyTiles));
-      } else {
-        throw response;
-      }
-    };
-
-    fetchMalData();
-  }, []);
-
+const Entertainment = ({ shows }) => {
   return (
     <div className="flex gap-3">
       <div>
@@ -68,3 +61,4 @@ const Entertainment = () => {
 };
 
 export default Entertainment;
+export { fetchMalData };
