@@ -26,7 +26,7 @@ const MediaSidebar = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-3 p-3 rounded bg-white">
+    <div className="flex flex-col gap-3 p-3 rounded bg-white shadow">
       {tiles.map((tile, index) => (
         <MediaTile data={tile} key={index} />
       ))}

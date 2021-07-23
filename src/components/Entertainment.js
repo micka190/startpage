@@ -33,7 +33,7 @@ const Entertainment = ({ shows }) => {
       <div>
         <MediaSidebar />
       </div>
-      <div className="flex flex-col gap-3 p-3 rounded bg-white col-span-4">
+      <div className="flex flex-col gap-3 p-3 rounded bg-white col-span-4 shadow">
         <div className="flex justify-between">
           <h1 className="text-2xl text-gray-500">Currently watching</h1>
           <LinkButton href="https://myanimelist.net/animelist/micka190">
