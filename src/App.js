@@ -20,7 +20,7 @@ export default () => {
       new Comic("Great duke of hell", "https://www.webtoons.com/en/comedy/love-advice/list?title_no=1498"),
       new Comic("False knees", "https://www.falseknees.com"),
       new Comic("Marble Gate", "https://marblegate.webcomic.ws/comics/"),
-      new Comic("Swords", "https://swordscomic.com/comic"),
+      new Comic("Swords", "https://swordscomic.com"),
       new Comic("Weekly Roll", "https://www.webtoons.com/en/challenge/the-weekly-roll/list?title_no=358889"),
     ]
   };
