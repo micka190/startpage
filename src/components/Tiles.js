@@ -23,7 +23,7 @@ const Tile = ({ link, gradient, children, height = "h-96", width = "w-96" }) => 
 };
 
 const LemmyTile = () => (
-  <Tile gradient={"to-green-600 from-emerald-600"} link="https://www.lemmy.world/">
+  <Tile gradient={"to-green-600 from-emerald-600"} link="https://lemmy.world/">
     <img src={Lemmy} alt="Lemmy logo" />
   </Tile>
 )
