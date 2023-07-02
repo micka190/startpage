@@ -1,5 +1,5 @@
 import {
-  RedditTile,
+  LemmyTile,
   YouTubeTile,
   MyAnimeListTile,
   ProtonMailTile,
@@ -8,16 +8,16 @@ import {
   GitHubTile,
 } from "./Tiles";
 
-const FavoritesSection = ({myAnimeListUsername = ""}) => (
+const FavoritesSection = ({ myAnimeListUsername = "" }) => (
   <div className="p-3 grid grid-cols-3 grid-rows-4 gap-3">
     <div className="row-span-2">
-      <RedditTile />
+      <LemmyTile />
     </div>
     <div className="row-span-2">
       <YouTubeTile />
     </div>
     <div className="row-span-2">
-      <MyAnimeListTile username={myAnimeListUsername}/>
+      <MyAnimeListTile username={myAnimeListUsername} />
     </div>
     {/* "mt-[-.4rem] to fix the alignment issue caused by subgrid's "gap-3" */}
     <div className="row-span-2 col-span-2 mt-[-.4rem]">

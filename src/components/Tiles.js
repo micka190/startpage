@@ -1,4 +1,4 @@
-import Reddit from "../images/reddit.png";
+import Lemmy from "../images/lemmy.png";
 import YouTube from "../images/youtube.png";
 import MyAnimeList from "../images/myanimelist.png";
 import ProtonMail from "../images/protonmail.png";
@@ -22,11 +22,11 @@ const Tile = ({ link, gradient, children, height = "h-96", width = "w-96" }) => 
   );
 };
 
-const RedditTile = () => (
-  <Tile gradient={"to-orange-600 from-red-600"} link="https://www.reddit.com/">
-    <img src={Reddit} alt="Reddit logo" />
+const LemmyTile = () => (
+  <Tile gradient={"to-green-600 from-emerald-600"} link="https://www.lemmy.world/">
+    <img src={Lemmy} alt="Lemmy logo" />
   </Tile>
-);
+)
 
 const YouTubeTile = () => (
   <Tile gradient={"to-red-500 via-red-600 from-red-700"} link="https://www.youtube.com/feed/subscriptions">
@@ -34,7 +34,7 @@ const YouTubeTile = () => (
   </Tile>
 );
 
-const MyAnimeListTile = ({username = ""}) => (
+const MyAnimeListTile = ({ username = "" }) => (
   <Tile gradient={"to-blue-500 from-blue-600"} link={`https://myanimelist.net/animelist/${username}?status=1`}>
     <img src={MyAnimeList} alt="MyAnimeList logo" />
   </Tile>
@@ -71,7 +71,7 @@ const GitHubTile = () => (
 
 export {
   Tile,
-  RedditTile,
+  LemmyTile,
   YouTubeTile,
   MyAnimeListTile,
   ProtonMailTile,
