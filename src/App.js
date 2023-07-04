@@ -20,7 +20,7 @@ export default () => {
       new Comic("Public U. Art Club", "https://www.webtoons.com/en/challenge/public-u-art-club/list?title_no=874156"),
       new Comic("False knees", "https://www.falseknees.com"),
       new Comic("Marble Gate", "https://marblegate.webcomic.ws/comics/"),
-      new Comic("Swords", "https://swordscomic.com"),
+      new Comic("Colmscomics", "https://www.webtoons.com/en/challenge/colmscomics/list?title_no=501823"),
       new Comic("Weekly Roll", "https://www.webtoons.com/en/challenge/the-weekly-roll/list?title_no=358889"),
     ]
   };
