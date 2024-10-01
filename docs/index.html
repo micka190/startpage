@@ -1,1 +1,82 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>Home</title><script defer="defer" src="/startpage/static/js/main.29149b45.js"></script><link href="/startpage/static/css/main.3a0f9b40.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/scripts.js"></script>
+  <!-- Automatic dark mode after 6pm -->
+  <script>
+    const hours = new Date().getHours();
+    if (hours >= 2) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="tiles">
+      <a class="tile tiles__lemmy" aria-label="Lemmy link" href="https://lemmy.world/">
+        <img alt="Lemmy logo" src="images/lemmy.png" />
+      </a>
+      <a class="tile tiles__youtube" aria-label="YouTube link" href="https://www.youtube.com/feed/subscriptions">
+        <img alt="YouTube logo" src="images/youtube.png" />
+      </a>
+      <a class="tile tiles__mal" aria-label="My Anime List link"
+        href="https://myanimelist.net/animelist/micka190?status=1&order=12&order2=0">
+        <img alt="Mal logo" src="images/myanimelist.png" />
+      </a>
+      <a class="tile tiles__proton-mail" aria-label="ProtonMail link" href="https://mail.proton.me/">
+        <img alt="ProtonMail logo" src="images/protonmail.png" />
+      </a>
+      <a class="tile tiles__proton-drive" aria-label="ProtonDrive link" href="https://drive.proton.me/">
+        <img alt="ProtonDrive logo" src="images/protondrive.png" />
+      </a>
+      <a class="tile tiles__github" aria-label="GitHub link" href="https://github.com/">
+        <img alt="GitHub logo" src="images/github.png" />
+      </a>
+    </div>
+
+    <hr />
+
+    <div class="comics">
+      <h2 class="comics__header">Comics</h2>
+      <button id="btn-open-all" class="comics__open-all">Open all</button>
+
+      <a class="comic" href="https://www.webtoons.com/en/slice-of-life/bluechair/list?title_no=199">
+        Blue Chair
+      </a>
+      <a class="comic" href="https://loadingartist.com/">
+        Loading Artist
+      </a>
+      <a class="comic" href="https://poorlydrawnlines.com/">
+        Poorly Drawn Lines
+      </a>
+      <a class="comic" href="https://www.webtoons.com/en/challenge/public-u-art-club/list?title_no=874156">
+        Public U. Art Club
+      </a>
+      <a class="comic" href="https://www.falseknees.com">
+        False Knees
+      </a>
+      <a class="comic" href="https://marblegate.webcomic.ws/comics/">
+        Marble Gate
+      </a>
+      <a class="comic" href="https://www.webtoons.com/en/challenge/colmscomics/list?title_no=501823">
+        Colmscomics
+      </a>
+      <a class="comic" href="https://www.webtoons.com/en/challenge/the-weekly-roll/list?title_no=358889">
+        Weekly Roll
+      </a>
+      <a class="comic" href="https://www.webtoons.com/en/comedy/sellswords-and-sorcery/list?title_no=6828">
+        Sellswords &amp; Sorcery
+      </a>
+
+    </div>
+  </div>
+</body>
+
+</html>

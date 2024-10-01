@@ -1,0 +1,229 @@
+:root {
+  /* Controls the responsive row count. */
+  --tile-count: 6;
+
+  --body-bg: #F1F3F5;
+  --container-bg: #FFFFFF;
+  --container-width: calc(min(100%, 80rem));
+  --border-color: #CED4DA;
+  --border: 1px solid var(--border-color);
+  --gap: 1rem;
+  --btn-bg: black;
+  --btn-bg-hover: #343a40;
+  --btn-text: white;
+  --comic-header-text: black;
+  --comic-bg-hover: #edf2ff;
+  --comic-text: #212529;
+  --comic-text-hover: #364fc7;
+}
+
+html[data-theme="dark"] {
+  --body-bg: #0f172a;
+  --container-bg: #334155;
+  --border-color: #020617;
+  --comic-header-text: white;
+  --comic-bg-hover: #364fc7;
+  --comic-text: white;
+  --comic-text-hover: #edf2ff;
+}
+
+html {
+  font-family: ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue",
+    "Arial",
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--body-bg);
+  padding: var(--gap);
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  border: var(--border);
+}
+
+html[data-theme="dark"] hr {
+  border: 1px solid #64748b;
+}
+
+img {
+  max-width: calc(min(400px, 100%));
+  max-height: calc(min(400px, 100%));
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  background: var(--container-bg);
+  border: var(--border);
+  border-radius: 5px;
+  width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+/* #region Tiles */
+
+.tiles {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.tile {
+  padding: var(--gap);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, var(--from), var(--to));
+}
+
+.tiles__lemmy,
+.tiles__youtube,
+.tiles__mal {
+  grid-column: auto / span 2;
+  grid-row: auto / span 2;
+}
+
+.tiles__proton-mail,
+.tiles__proton-drive {
+  grid-column: auto / span 4;
+}
+
+.tiles__github {
+  grid-column: 5 / span 2;
+  grid-row: 3 / span 2;
+}
+
+.tiles__lemmy,
+.tiles__youtube,
+.tiles__mal,
+.tiles__github {
+  aspect-ratio: 1 / 1;
+}
+
+.tiles__lemmy {
+  --from: #37b24d;
+  --to: #099268;
+}
+
+.tiles__youtube {
+  --from: #ef4444;
+  --to: #b91c1c;
+}
+
+.tiles__mal {
+  --from: #228be6;
+  --to: #3b5bdb;
+}
+
+.tiles__proton-mail {
+  --from: #2563eb;
+  --to: #7e22ce;
+}
+
+.tiles__github {
+  --from: #0f172a;
+  --to: black;
+}
+
+.tiles__proton-drive {
+  background: linear-gradient(to bottom right, var(--from), var(--via), var(--to));
+  --from: #f43f5e;
+  --via: #9333ea;
+  --to: #3b82f6;
+}
+
+@media (max-width: 800px) {
+  .tiles {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--tile-count), 1fr);
+  }
+
+  .tiles__lemmy,
+  .tiles__youtube,
+  .tiles__mal,
+  .tiles__github {
+    aspect-ratio: auto;
+  }
+
+  .tiles__lemmy,
+  .tiles__youtube,
+  .tiles__mal,
+  .tiles__github,
+  .tiles__proton-mail,
+  .tiles__proton-drive {
+    grid-column: auto / span 1;
+    grid-row: auto / span 1;
+    max-height: 200px;
+  }
+}
+
+/* #endregion */
+
+/* #region Comics */
+
+.comics {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--gap);
+  align-items: start;
+}
+
+.comics__header {
+  font-weight: 400;
+  margin: 0;
+  color: var(--comic-header-text);
+}
+
+.comics__open-all {
+  grid-column: 5;
+  justify-self: end;
+  max-width: fit-content;
+  padding-block: 0.75rem;
+  padding-inline: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  color: var(--btn-text);
+  background: var(--btn-bg);
+
+  &:hover {
+    cursor: pointer;
+    background: var(--btn-bg-hover);
+  }
+}
+
+.comic {
+  text-decoration: none;
+  text-align: center;
+  color: var(--comic-text);
+  padding-block: 0.75rem;
+  padding-inline: 1.5rem;
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--comic-text-hover);
+    background: var(--comic-bg-hover);
+  }
+}
+
+/* #endregion */
