@@ -1,6 +1,8 @@
 # Startpage
 
-A simple startpage made with React.
+A simple startpage.
 
-The `config` object can be configured in `/src/App.js` to customize the page's
-content.
+
+> [!TIP]
+> Files are placed directly into the `/docs` directory, because GitHub will use
+> that directory for the GitHub Pages feature.
